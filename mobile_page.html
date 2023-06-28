@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Seller, Book List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Roborto, "Helvetica Neue", Arial, sans-serif;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            border: 0;
+            width: 300px;
+        }
+        li {
+            list-style: none;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* main-header style */
+        #main-header {
+            padding: 10px 5px;
+        }
+        #main-header h1 {
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 27px;
+            color: rosybrown;
+        }
+        #main-header ul {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #main-header li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #main-header li a {
+            color: #888;
+        }
+        #main-header li.active a {
+            color: #555;
+            font-weight: 500;
+        }
+        
+        #main-header label {
+            text-align: center;
+            float: right;
+            width: 40px;
+            height: 27px;
+            line-height: 27px;
+            color: #222;
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+        #checkbox {
+            display: none;
+        }
+        #checkbox + nav {
+            display: block;
+        }
+        #checkbox:checked + nav {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-header">
+        <header class="container">
+            <div>
+                <label for="checkbox">▼</label>
+                <h1>Best Seller, BookList</h1>
+            </div>
+            <input type="checkbox" id="checkbox" checked>
+            <nav>
+                <ul>
+                    <li><a href="#">Brand</a></li>
+                    <li class="active"><a href="#">Network</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="main-content">
+        <article class="container">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid saepe, laudantium minus quas magnam ab perferendis, velit unde modi illo optio quibusdam assumenda totam in molestiae voluptatem vitae tempore incidunt!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis veniam sint earum eveniet iusto optio non qui ad, tempora dignissimos, quos doloribus! Repudiandae debitis eveniet nemo, aspernatur sint velit non.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero magni, totam quos suscipit velit a alias deleniti. Dolore reprehenderit nostrum excepturi, temporibus et animi delectus nulla molestias pariatur, nam praesentium.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptatem natus labore, esse voluptate sit. Dicta magni quidem consectetur sed maiores numquam provident aut, nisi deserunt dolor recusandae expedita quam.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus beatae exercitationem nesciunt nostrum optio nulla a ipsa, laboriosam dolores hic at ullam necessitatibus quasi soluta eveniet modi officiis dolorum vel.
+            </p>
+        </article>
+    </div>
+    <div id="sub-content">
+        <article class="container">
+            <h1>하버드 스탠퍼드 생각수업</h1>
+            <h2>
+                세계 최고 인재들의 수업에서 배우는 33가지 사고력 훈련
+                <img src="imgs/image1.jpg" alt="">
+            </h2>
+            <p>
+                하버드, 스탠퍼드 대학의 사고력을 높이는 ‘스스로 생각하는 힘’ 트레이닝
+                불확실한 미래에 꼭 필요한 인간의 능력은<br>
+                오직 ‘나만이 할 수 있는 일’을 갖는 것이다!<br>
+                AI, 사물인터넷, 빅데이터, 로봇, 첨단 센서. 불과 10년 전까지만 해도 생소한 용어나 개념으로 간주되던 기술들이 이제 우리 일상생활 곳곳에 스며들어 없어서는 안 될 존재로 자리하고 있다. 사람과 대화할 수 있는 음성 어시스턴트와 로봇청소기 등 우리 주변에는 인간을 대신할 이미 다양한 AI가 등장했다. 머지않아 AI가 인간의 일자리를 대신할 것이라는 전망도 있다. 이제 다른 사람과 똑같은 답안은 AI로 대체되고 말 것이다. 무엇과도 대체될 수 없는 나만의 해결방법을 제시할 줄 아는 사람이 우수하다고 평가되는 시대가 코앞으로 다가온 것이다.<br><br>
+
+                《하버드 스탠퍼드 생각수업》은 하버드대 교육학부에서 창안한 ‘생각하는 스킬’을 기르기 위한 트레이닝을 바탕으로 스탠퍼드대의 ‘생각하는 힘’을 푸는 문제와 저자가 현실에 맞게 변형한 문제를 한데 모은 것이다. 비판적 사고, 언어화 기법, 창조력 등 ‘생각하는 힘’을 배울 수 있으며 어른부터 어린이까지 즐기면서 읽을 수 있도록 구성했다.<br><br>
+
+                20여 년간 대학을 비롯해 학생들에게 비판적 사고를 가르치며 사고력과 전달력을 기르는 수업을 해온 교육전문가인 저자는 조금은 이상하고 엉뚱한 문제들을 제시하면서 ‘당신은 어떻게 생각하는가?’라는 질문을 반복해서 던진다. 정답을 제시하고 거기에 끼워 맞추는 매뉴얼을 알려주는 것이 아니라 생각하는 구체적인 방법, 즉 스스로 질문하고 그 질문에 대답해가는 과정을 통해 자연스럽게 나만의 생각을 전개해나갈 수 있도록 도와준다. 여기에는 ‘이상한’ 문제들도 많이 나온다. 다른 사람이나 AI가 흉내 낼 수 없는 독창적인 생각을 엮어내고 내면에 있는 독특한 사고방식을 일깨우기 위해서는 뻔하지 않은 이처럼 이상한 문제가 필수다.<br><br>
+
+                이 책에 소개된 어떤 문제에도 정답은 없다. 그러기에 ‘원래 그런 것’이라 당연시하던 것을 의심하면서 자신만의 관점을 만들고, 제대로 생각하기 위해 선행되어야 할 질문을 통해 자신의 생각을 적어 내려가는 과정이 매우 중요하다. 이를 통해 머릿속으로만 생각하는 게 아니라 ‘자신만의 언어’로 구체화할 것을 제안한다. 그리고 생각하는<br>
+            </p>
+
+            <article class="container">
+                <h1>위로가 결제되었습니다.</h1>
+                <h2>
+                    트럼펫을 부는 열 명의 벌거벗은 사람들.
+                    <img src="imgs/image2.jpg" alt="">
+                </h2>
+                <p>
+                    위로가 필요할지도 모르는 우리가 만나 글을 썼습니다.<br>
+                    자신이 쓴 글을 보여 주는 것은 마치 옷을 벌거벗고 남들 앞에 서 있는 것과 비슷한 생각이 듭니다.<br>
+                    그래도 우리는 우리들의 이야기를 써 내려갔습니다.<br>
+                    한 권은 나를 위하여, 다른 한 권은 너를 위하여, 마지막 한 권은 위로가 필요한 그대들을 위한 것입니다.<br>
+                    우리들의 글을 읽다 보면 세상 모든 사람들의 고민이 많이 닮아 있음을 다시금 알게 됩니다. 글을 쓰는 동안 서로의 글을 읽고, 함께 고민하고 같이 웃었습니다. 상대방을 이해하고 공감할 수 있는 시간이었기에 좋은 기억으로 남았고, 앞으로 상황이 허락한다면 ‘문우(文友)’의 인연을 이어가 볼까 합니다. 복중에는 인연복이 제일이요, 인연복은 인화에서 나오고 인화는 심화에서 나온다고 합니다. 마음자리가 중요하단 뜻인데 힘든 세상에서 좋은 마음 갖기 힘들 때 우리의 글을 보고 위로가 되었으면 하는 바람입니다.<br><br>
+
+                    세상은 우리에게 술을 권하지만, 우리는 글 읽기를 권합니다.<br><br>
+
+                    우리는 스스로에게 승리와 환희의 트럼펫을 연주하듯 글을 썼습니다.<br>
+                    그대들도 우리의 트럼펫 연주를 들어 보지 않겠습니까?<br>
+                </p>
+        </article>
+    </div>
+    <div id="main-footer">
+        <footer class="container">
+            <div>&copy;2023. June Moblie Project Test. All rights reserved.</div>
+        </footer>
+    </div>
+</body>
+</html>
