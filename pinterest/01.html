@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pinterest 연습</title>
     <script src="../../js/jquery-3.7.0.js"></script>
-    <script src="../jquery_masonry-2.1.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.0/jquery.masonry.min.js"></script>
+    <script src="../imagesloaded.pkgd.min.js"></script>
 
     <style>
         * {
@@ -235,6 +235,49 @@
             margin: 10px 0;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $(".outer-menu").hover(function () {
+                $(this).find(".inner-menu").css("display", "block");
+            }, function () {
+                $(this).find(".inner-menu").css("display", "none");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#main-section").imagesLoaded(function () {
+                $("#main-section").masonry({
+                    itemSelector: ".paper", 
+                    columnWidth: 230,
+                    isAnimated: true
+                })
+            })
+        });
+
+        $(document).ready(function () {
+            function showLightBox() {
+                $("#darken-background").show();
+                $("#darken-background").css("top", $(window).scrollTop());
+                $("body").css("overflow", "hidden");
+            }
+
+            function hideLightBox() {
+                $("#darken-background").hide();
+                $("body").css("overflow", "");
+            }
+
+            $("#darken-background").click(function () {
+                hideLightBox();
+            });
+            $("#lightbox").click(function (event) {
+                event.stopPropagation();
+            });
+
+            $(".paper").click(function () {
+                showLightBox();
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="main-header">
@@ -283,15 +326,99 @@
             <li><a href="#">Gift</a></li>
         </ul>
     </nav>
-    <section id="man-section">
+    <section id="main-section">
         <div class="paper">
             <div class="paper-holder">
-                <a><img src="http://placehold.it/190x100" width="100"></a>
+                <a><img src="http://placekitten.com/190/306" width="100"></a>
             </div>
             <p class="paper-description">Lorem ipsum dolor sit amet</p>
             <div class="paper-content">
                 <a href="#" class="paper-link">
-                    <img src="http://placehold.it/190x100">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/100" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/306" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/300" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/200" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/100" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/158" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img src="http://placekitten.com/190/100" width="100"></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a href="#" class="paper-link">
+                    <img src="http://placekitten.com/30/30">
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet</p>
             </div>
@@ -302,7 +429,7 @@
         <div id="lightbox">
             <div class="user-information">
                 <a href="#" class="user-information-image">
-                    <img src="http://placehold.it/70x70">
+                    <img src="http://placekitten.com/70/70">
                 </a>
                 <div class="user-information-text">
                     <h3>User</h3>
@@ -311,7 +438,7 @@
             </div>
         </div>
         <hr class="lightbox-splitter">
-        <img src="http://placehold.it/600x750">
+        <img src="http://placekitten.com/600/750">
     </div>
 </body>
 </html>
